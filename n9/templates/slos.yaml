@@ -21,7 +21,7 @@
         query:
           thousandEyes:
             testID: int
-            testType: http-response-time
+            testType: string #see README.md for currently allowed test types
       target: float64
       value: float64
     service: string
