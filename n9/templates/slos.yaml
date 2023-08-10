@@ -1,0 +1,36 @@
+- apiVersion: n9/v1alpha
+  kind: SLO
+  metadata:
+    displayName: string
+    name: string
+    project: string
+  spec:
+    alertPolicies: []
+    budgetingMethod: Occurrences|Timeslice
+    description: string
+    indicator:
+      metricSource:
+        kind: Direct|Agent
+        name: string
+        project: string
+    objectives:
+    - displayName: string
+      name: string
+      op: gt|gte|lt|lte
+      rawMetric:
+        query:
+          thousandEyes:
+            testID: int
+            testType: http-response-time
+      target: float64
+      value: float64
+    service: string
+    timeWindows:
+#rolling time window
+    - count: int
+      isRolling: true
+      unit: Minute|Hour|Day
+#or calendar-aligned time window
+    - count: int
+      isRolling: false
+      unit: Day|Week|Month|Quarter|Year
