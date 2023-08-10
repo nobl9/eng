@@ -6,7 +6,7 @@
     project: string
   spec:
     queryDelay:
-      unit: Minute|Hour|Day
+      unit: Second|Minute
       value: int
     sourceOf:
     - Metrics
