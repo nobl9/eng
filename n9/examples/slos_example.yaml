@@ -1,0 +1,217 @@
+- apiVersion: n9/v1alpha
+  kind: SLO
+  metadata:
+    displayName: Web Server Response Time
+    name: web-page-response-time
+    project: thousand-eyes
+  spec:
+    alertPolicies: []
+    budgetingMethod: Occurrences
+    description: ""
+    indicator:
+      metricSource:
+        kind: Direct
+        name: thousand-eyes
+        project: thousand-eyes
+    objectives:
+    - displayName: Web Server Response Time
+      name: web-page-response-time
+      op: lt
+      rawMetric:
+        query:
+          thousandEyes:
+            testID: '[hidden]'
+            testType: http-response-time
+      target: 0.99
+      value: 150
+    service: thousand-eyes
+    timeWindows:
+    - count: 28
+      isRolling: true
+      unit: Day
+- apiVersion: n9/v1alpha
+  kind: SLO
+  metadata:
+    displayName: Web Server Throughput
+    name: web-server-throughput
+    project: thousand-eyes
+  spec:
+    alertPolicies: []
+    budgetingMethod: Occurrences
+    description: ""
+    indicator:
+      metricSource:
+        kind: Direct
+        name: thousand-eyes
+        project: thousand-eyes
+    objectives:
+    - displayName: Web Server Throughput
+      name: web-server-throughput
+      op: gte
+      rawMetric:
+        query:
+          thousandEyes:
+            testID: '[hidden]'
+            testType: http-server-throughput
+      target: 0.99
+      value: 5000000
+    service: thousand-eyes
+    timeWindows:
+    - count: 28
+      isRolling: true
+      unit: Day
+- apiVersion: n9/v1alpha
+  kind: SLO
+  metadata:
+    displayName: Network Loss
+    name: network-loss
+    project: thousand-eyes
+  spec:
+    alertPolicies: []
+    budgetingMethod: Occurrences
+    description: ""
+    indicator:
+      metricSource:
+        kind: Direct
+        name: thousand-eyes
+        project: thousand-eyes
+    objectives:
+    - displayName: Network Loss
+      name: network-loss
+      op: lt
+      rawMetric:
+        query:
+          thousandEyes:
+            testID: '[hidden]'
+            testType: net-loss
+      target: 0.999
+      value: 0.1
+    service: thousand-eyes
+    timeWindows:
+    - count: 28
+      isRolling: true
+      unit: Day
+- apiVersion: n9/v1alpha
+  kind: SLO
+  metadata:
+    displayName: Web DOM Load
+    name: web-dom-load
+    project: thousand-eyes
+  spec:
+    alertPolicies: []
+    budgetingMethod: Occurrences
+    description: ""
+    indicator:
+      metricSource:
+        kind: Direct
+        name: thousand-eyes
+        project: thousand-eyes
+    objectives:
+    - displayName: Web DOM Load
+      name: web-dom-load
+      op: lt
+      rawMetric:
+        query:
+          thousandEyes:
+            testID: '[hidden]'
+            testType: web-dom-load
+      target: 0.99
+      value: 2000
+    service: thousand-eyes
+    timeWindows:
+    - count: 28
+      isRolling: true
+      unit: Day
+- apiVersion: n9/v1alpha
+  kind: SLO
+  metadata:
+    displayName: Network Latency
+    name: network-latency
+    project: thousand-eyes
+  spec:
+    alertPolicies: []
+    budgetingMethod: Occurrences
+    description: ""
+    indicator:
+      metricSource:
+        kind: Direct
+        name: thousand-eyes
+        project: thousand-eyes
+    objectives:
+    - displayName: Network Latency
+      name: network-latency
+      op: lte
+      rawMetric:
+        query:
+          thousandEyes:
+            testID: '[hidden]'
+            testType: net-latency
+      target: 0.999
+      value: 150
+    service: thousand-eyes
+    timeWindows:
+    - count: 28
+      isRolling: true
+      unit: Day
+- apiVersion: n9/v1alpha
+  kind: SLO
+  metadata:
+    displayName: Web Page Load
+    name: web-page-load
+    project: thousand-eyes
+  spec:
+    alertPolicies: []
+    budgetingMethod: Occurrences
+    description: ""
+    indicator:
+      metricSource:
+        kind: Direct
+        name: thousand-eyes
+        project: thousand-eyes
+    objectives:
+    - displayName: Web Page Load
+      name: web-page-load
+      op: lte
+      rawMetric:
+        query:
+          thousandEyes:
+            testID: '[hidden]'
+            testType: web-page-load
+      target: 0.99
+      value: 3000
+    service: thousand-eyes
+    timeWindows:
+    - count: 28
+      isRolling: true
+      unit: Day
+- apiVersion: n9/v1alpha
+  kind: SLO
+  metadata:
+    displayName: HTTP Server Response
+    name: http-server-response
+    project: thousand-eyes
+  spec:
+    alertPolicies: []
+    budgetingMethod: Occurrences
+    description: ""
+    indicator:
+      metricSource:
+        kind: Direct
+        name: thousand-eyes
+        project: thousand-eyes
+    objectives:
+    - displayName: HTTP Server Response
+      name: http-server-Response
+      op: lte
+      rawMetric:
+        query:
+          thousandEyes:
+            testID: '[hidden]'
+            testType: http-server-availability
+      target: 0.999
+      value: 200
+    service: thousand-eyes
+    timeWindows:
+    - count: 28
+      isRolling: true
+      unit: Day
