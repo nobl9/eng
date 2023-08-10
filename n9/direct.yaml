@@ -1,0 +1,16 @@
+- apiVersion: n9/v1alpha
+  kind: Direct
+  metadata:
+    displayName: string
+    name: string
+    project: string
+  spec:
+    queryDelay:
+      unit: Minute|Hour|Day
+      value: int
+    sourceOf:
+    - Metrics
+    thousandEyes:
+      oauthBearerToken: string
+  status:
+    directType: ThousandEyes

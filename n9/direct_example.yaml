@@ -1,0 +1,16 @@
+- apiVersion: n9/v1alpha
+  kind: Direct
+  metadata:
+    displayName: Thousand Eyes
+    name: thousand-eyes
+    project: thousand-eyes
+  spec:
+    queryDelay:
+      unit: Minute
+      value: 1
+    sourceOf:
+    - Metrics
+    thousandEyes:
+      oauthBearerToken: '[hidden]'
+  status:
+    directType: ThousandEyes

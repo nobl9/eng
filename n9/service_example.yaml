@@ -1,0 +1,8 @@
+- apiVersion: n9/v1alpha
+  kind: Service
+  metadata:
+    displayName: Thousand Eyes
+    name: thousand-eyes
+    project: thousand-eyes
+  spec:
+    description: "Network performance for East Coast fabric"

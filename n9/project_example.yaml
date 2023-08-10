@@ -1,0 +1,6 @@
+- apiVersion: n9/v1alpha
+  kind: Project
+  metadata:
+    name: thousand-eyes
+  spec:
+    description: "ThousandEyes monitored network performance SLOs"
