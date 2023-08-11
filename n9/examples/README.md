@@ -13,3 +13,6 @@ Once these have been configured (and you have everything configured as per the [
 4. And, finally, create your example SLOs by running `sloctl apply -f slos.yaml`
 
 You may rename any of these objects, in which case you will have to ensure that their references are also updates. For example, if you want a different `project` name, you will need to make sure that your `service`, `direct`, and `slo` objects all reference that different `project` name. If you change the `service` name you will need to ensure all `slo` objects reference that changed `service` name.
+
+### ThousandEyes Tests
+To learn more about which ThousandEyes tests Nobl9 supports, please see the documentation [here.](https://docs.nobl9.com/Sources/thousandeyes)
