@@ -12,7 +12,7 @@ If you do not have a Nobl9 account, you can sign up for a permanent free tier [h
 
 ## Setting up ThousandEyes
 
-(Find right instructions in their docs and link here.)
+Instructions to come.
 
 ## Setting up Nobl9
 
